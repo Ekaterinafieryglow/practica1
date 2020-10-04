@@ -8,4 +8,4 @@
    Пользование простое, достаточно следовать надписям в окне программы: ввести сообщения для кодировки, сдвиг, команду: encode, decode, получить 
    зашифрованное или расшифрованное сообщение.
    
-   ![Alt-текст](practice1/Visual Studio.jpg "Visual Studio")
+   ![Alt-текст](master/practice1/Visual Studio.jpg "Visual Studio")

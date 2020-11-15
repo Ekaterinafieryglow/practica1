@@ -1,13 +1,28 @@
 #include <iostream>
+#include<string>
 using namespace std;
 
 int main()
 {
     setlocale(LC_ALL, "rus");
+    bool key;
+    string amount;
 
-    float  rows(NULL);
-    cout << "Введите количество критериев: ";
-    cin >> rows;
+    do                                 // Проверка строки данных на число
+    {
+        key = true;
+        cout << "Введите количество критериев: ";
+        cin >> amount;
+        for (int i = 0; i < amount.length(); i++)  
+        {
+            if ((!isdigit(amount[i])) and (amount[i] != '-'))
+            {
+                key = false;
+                cout << "Вы ввели не целое число! Попробуйте ввести еще раз!" << endl;
+            }
+        }
+    } while (!key);
+    float rows = std::stof(amount);
 
     float** arr = new float* [rows];   // Динамический двумерный массив данных попарного сравнения критериев
     float* arrSum = new float[rows];   // Динамический одномерный массив суммы строк
